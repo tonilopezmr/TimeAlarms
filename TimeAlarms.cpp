@@ -209,6 +209,13 @@ void TimeAlarmsClass::disable(AlarmID_t ID)
   }
 }
 
+bool TimeAlarmsClass::isEnabled(AlarmID_t ID)	
+{	
+  if (isAllocated(ID)) {	
+    return Alarm[ID].Mode.isEnabled;	
+  }	
+}
+
 // write the given value to the given alarm
 void TimeAlarmsClass::write(AlarmID_t ID, time_t value)
 {
