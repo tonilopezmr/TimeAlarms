@@ -166,6 +166,7 @@ public:
   void waitForRollover(dtUnits_t Units);
 
   // low level methods
+  bool isEnabled(AlarmID_t ID);             //returns tru if the given alarm is enabled
   void enable(AlarmID_t ID);                // enable the alarm to trigger
   void disable(AlarmID_t ID);               // prevent the alarm from triggering
   AlarmID_t getTriggeredAlarmId() const;          // returns the currently triggered  alarm id
